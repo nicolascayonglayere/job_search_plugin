@@ -1,0 +1,36 @@
+{
+
+    "manifest_version": 2,
+    "name": "gestion recherche emploi",
+    "version": "1.0",
+  
+    "description": "Aide à la recherche d'emploi",
+  
+    "icons": {
+      "48": "icon/téléchargement.png"
+    },
+
+
+    "browser_action": {
+      "default_icon": "icon/téléchargement-38.png",
+      "default_title": "emploi"
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "emploi@example.com"
+        }
+    },
+
+    "permissions": [
+      "topSites"
+    ],
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["emploi.js"]
+      }
+    ]
+  
+  }
